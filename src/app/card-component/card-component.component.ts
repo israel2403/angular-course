@@ -24,4 +24,10 @@ export class CardComponentComponent {
     console.log("Card componnent- button clicked");
     this.courseEmitter.emit(this.course);
   }
+  cardClasses() {
+    return {
+      "course-card": true,
+      beginner: true,
+    };
+  }
 }
