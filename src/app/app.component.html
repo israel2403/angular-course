@@ -2,10 +2,6 @@
     <img class="logo" src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 </div>
 
-<div class="demo">
-    <div> Start Date: {{startDate | date:'MMM/dd/yyyy' }}</div>
-</div>
-
 <div class="courses">
     @for (course of courses; track course.id; let index = $index; let count=$count; let first = $first; let last =
     $last; let even=$even; let odd=$odd;) {
