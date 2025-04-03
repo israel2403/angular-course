@@ -27,7 +27,6 @@ export class CardComponentComponent {
   cardClasses() {
     return {
       beginner: this.course.category === "BEGINNER",
-      "course-card": true,
     };
   }
 }
