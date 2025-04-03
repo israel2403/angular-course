@@ -10,6 +10,8 @@ import { Course } from "./model/course";
 })
 export class AppComponent {
   courses = [...COURSES];
+
+  startDate = new Date(2000, 0, 1);
   onCourseSelected(course: Course) {
     console.log("App componnent - click event bubbled...", course);
   }
