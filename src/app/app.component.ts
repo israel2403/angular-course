@@ -12,11 +12,14 @@ import { Course } from "./model/course";
 export class AppComponent {
   public courses = [...COURSES];
 
-  @ViewChild(CardComponentComponent)
-  card: CardComponentComponent;
+  @ViewChild("cardRef1")
+  card1: CardComponentComponent;
+  @ViewChild("cardRef2")
+  card2: CardComponentComponent;
 
   onCourseSelected(course: Course) {
-    console.log(this.card);
+    console.log(this.card1);
+    console.log(this.card2);
   }
 
   trackCourse(index: number, course: Course) {
