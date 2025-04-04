@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { COURSES } from "src/db-data";
+import { CardComponentComponent } from "./card-component/card-component.component";
 import { Course } from "./model/course";
 
 @Component({
@@ -9,10 +10,13 @@ import { Course } from "./model/course";
   standalone: false,
 })
 export class AppComponent {
-  courses = [...COURSES];
+  public courses = [...COURSES];
+
+  @ViewChild(CardComponentComponent)
+  card: CardComponentComponent;
 
   onCourseSelected(course: Course) {
-    console.log("App componnent - click event bubbled...", course);
+    console.log(this.card);
   }
 
   trackCourse(index: number, course: Course) {

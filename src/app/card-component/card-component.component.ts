@@ -14,8 +14,8 @@ export class CardComponentComponent {
   })
   course: Course;
 
-  @Input({ alias: "index", required: true })
-  cardIndex: number;
+  @Input({ alias: "index", required: false })
+  cardIndex: number = 0;
 
   @Output("courseSelected")
   courseEmitter = new EventEmitter<Course>();
