@@ -28,4 +28,7 @@ export class CourseCardComponent {
   cardClasses(): any {
     return { 'beginner': this.course.category === 'BEGINNER' }
   }
+  cardStyles(): any {
+    return { 'text-decoration': 'underline' }
+  }
 }
