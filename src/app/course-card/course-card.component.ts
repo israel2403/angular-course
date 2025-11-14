@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { Course } from '../model/course';
 
 @Component({
   selector: 'course-card',
-  imports: [],
+  imports: [BrowserAnimationsModule],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'
 })
@@ -22,5 +23,9 @@ export class CourseCardComponent {
   onCourseViewed() {
     console.log('Card component - button clicked ...');
     this.courseEmitter.emit(this.course);
+  }
+
+  cardClasses(): any {
+    return { 'beginner': this.course.category === 'BEGINNER' }
   }
 }
