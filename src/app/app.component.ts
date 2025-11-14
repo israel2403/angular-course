@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { COURSES } from '../db-data';
+import { COURSES } from 'src/db-data';
 import { Course } from './model/course';
 
 @Component({
@@ -10,7 +10,7 @@ import { Course } from './model/course';
 })
 export class AppComponent {
 
-  courses = COURSES;
+  courses = [...COURSES];
 
   onCourseSelected(course: Course) {
     console.log('App component - [click event bubbled...', course);
