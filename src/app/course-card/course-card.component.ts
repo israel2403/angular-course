@@ -8,6 +8,8 @@ import { Course } from '../model/course';
   styleUrl: './course-card.component.css'
 })
 export class CourseCardComponent {
-  @Input()
+  @Input({
+    required: true
+  })
   course: Course;
 }
