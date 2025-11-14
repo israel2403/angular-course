@@ -5,8 +5,8 @@
 </div>
 
 <div class="courses">
-  @for (course of courses; track course.id) {
-  <course-card (courseSelected)="onCourseSelected($event)" [course]="course" />
+  @for (course of courses; track course.id; let index = $index) {
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="course" [index]="index" />
   }
   @empty {
   <h1>No courses found! 😞</h1>
